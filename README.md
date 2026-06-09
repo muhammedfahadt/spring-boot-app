@@ -103,8 +103,8 @@ curl https://<your-codespace-url>/api
 
 ## 🐛 Ran into issues?
 
-See [FIXES.md](./FIXES.md) for a full troubleshooting guide covering every real problem encountered during setup.
-
+See https://github.com/muhammedfahadt/spring-boot-app/blob/docs/guides/FIXES.md
+ for a full troubleshooting guide covering every real problem encountered during setup.
 ---
 
 *Built and documented by Muhammed Fahad • June 2026*
