@@ -1,0 +1,52 @@
+{
+  "name": "Spring Boot Development",
+  "image": "mcr.microsoft.com/devcontainers/java:1-21",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "installMaven": "true",
+      "mavenVersion": "3.9.5",
+      "installGradle": "false"
+    },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.server.launchMode": "Standard",
+        "java.import.gradle.enabled": false,
+        "files.exclude": {
+          "**/.classpath": true,
+          "**/.project": true,
+          "**/.settings": true,
+          "**/.factorypath": true
+        }
+      },
+      "extensions": [
+        "Extension Pack for Java",
+        "Spring Boot Extension Pack",
+        "Database Clients",
+        "REST Client",
+        "Docker"
+      ]
+    }
+  },
+
+  "forwardPorts": [8080, 5432],
+  "portsAttributes": {
+    "8080": {
+      "label": "Spring Boot App",
+      "onAutoForward": "notify"
+    },
+    "5432": {
+      "label": "PostgreSQL",
+      "onAutoForward": "ignore"
+    }
+  },
+
+  "postCreateCommand": "mvn clean install",
+  
+  "remoteUser": "vscode"
+}
