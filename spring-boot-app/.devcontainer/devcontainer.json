@@ -38,10 +38,12 @@
   "portsAttributes": {
     "8080": {
       "label": "Spring Boot App",
-      "onAutoForward": "notify"
+      "visibility": "public",          
+      "onAutoForward": "openPreview"   
     },
     "5432": {
       "label": "PostgreSQL",
+      "visibility": "private",         
       "onAutoForward": "ignore"
     }
   },
